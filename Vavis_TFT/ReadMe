@@ -1,25 +1,25 @@
-* Install TFT_eSPI & LVGL libraries & 
+1. Install TFT_eSPI & LVGL Libraries
+   * Ensure you have installed the TFT_eSPI and LVGL libraries in Arduino IDE.
+2. Configure TFT_eSPI Library
+   * Locate and Open the TFT_eSPI Library:
+      -> In your Arduino IDE folder, navigate to libraries and find the TFT_eSPI library.
+   * Edit Display Driver in User Setup:
+      -> Open the User_Setup.h file in the TFT_eSPI folder and uncomment your display driver.
+      -> Alternatively, you can open User_Setup_Select.h and uncomment the line corresponding to your display setup.
+   * Adjust Driver Settings:
+      -> Go to the User_Setups folder within the TFT_eSPI folder.
+      -> Locate your driver’s setup file, for example, Setup70d_ILI9488_S3_Parallel.h.
+      -> Modify the pins and other settings to match your device configuration (e.g., ESP32-S3-WROOM-1 with an ILI9488 display).
 
-///////////////////////////////////////////////////////
-//             TFT_eSPI Library setiing              //
-///////////////////////////////////////////////////////
-
-* Open your Arduino IDE folder in this folder find the libraries and in this libabry open TFT_eSPI 
-* In TFT_eSPI folder open User_Setup.h file un comment your disply driver or if you want to use existing setup than open User_Setup_Select.h file and uncomment your driver
-* Than go to User_setup folder in tihs folder find your driver name .h file and adujust pin or other setting according to sutible your project and device
-NOTE:- this project using <User_Setups/Setup70d_ILI9488_S3_Parallel.h>  with esp 32s3-Wroom-1 and ILI9488 Display 
-
-
-///////////////////////////////////////////////////////
-//             LVGL Library setiing                  //
-///////////////////////////////////////////////////////
-
-* Open LVGL lilibabry and open this and in this folder find lv_conf_template.h file remane with lv_conf.h and copy this file and finde scr folder and past this file 
-* Open lv_conf.h Set it to "0" tp "1" for enable content 
-* if you want to use Littlefs in Arduino ide with lvgl than find LV_USE_FS_ARDUINO_ESP_LITTLEFS set "0" to "1" and Set an upper cased letter on which the drive will accessible
-* for use png & decode for this LV_USE_LODEPNG is enabel and also if you want to use bmp file enabel LV_USE_BMP 
-* and if you using existing TFT_eSPPI disply setting finde LV_USE_TFT_ESPI  and set "0" to "1"
-
-==> link for image and font convert for lvgl 
-   for image: https://lvgl.io/tools/imageconverter
-   for font : https://lvgl.io/tools/fontconverter
+3. Configure LVGL Library
+   * Enable Configuration in lv_conf.h:
+      -> In the LVGL library folder, locate lv_conf_template.h.
+      -> Rename it to lv_conf.h, then copy this file to the src folder.
+   * Adjust LVGL Settings in lv_conf.h:
+      -> Set required options by changing "0" to "1" for desired features, such as:
+      -> LittleFS support: Set LV_USE_FS_ARDUINO_ESP_LITTLEFS from 0 to 1. Define the drive letter for accessibility.
+      -> PNG and BMP decoding: Enable LV_USE_LODEPNG to use PNG images and LV_USE_BMP to use BMP files.
+      -> TFT_eSPI Compatibility: If using TFT_eSPI for display, set LV_USE_TFT_ESPI from 0 to 1.
+4. Additional Resources for LVGL:
+   * Image Converter: Use the LVGL Image Converter to convert images for LVGL.
+   * Font Converter: Use the LVGL Font Converter for creating custom fonts.
