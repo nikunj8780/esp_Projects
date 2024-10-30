@@ -21,5 +21,5 @@
       -> PNG and BMP decoding: Enable LV_USE_LODEPNG to use PNG images and LV_USE_BMP to use BMP files.
       -> TFT_eSPI Compatibility: If using TFT_eSPI for display, set LV_USE_TFT_ESPI from 0 to 1.
 4. Additional Resources for LVGL:
-   * Image Converter: Use the LVGL Image Converter to convert images for LVGL.
-   * Font Converter: Use the LVGL Font Converter for creating custom fonts.
+   * Image Converter: https://lvgl.io/tools/imageconverter
+   * Font Converter: https://lvgl.io/tools/fontconverter
